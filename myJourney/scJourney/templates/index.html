@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Learning Journey</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
+
+<body>
+    <div class="navbar">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'about' %}">About Me</a>
+    </div>
+
+    <div class="container">
+        <h1>My Learning Journey</h1>
+        <div class="image-section">
+            <img src="{% static 'images/journey.png' %}" alt="Admin Screenshot" class="journey-image">
+        </div>
+
+        {% if journey %}
+        <table class="journey-table">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for item in journey %}
+                <tr>
+                    <td>{{ item.title }}</td>
+                    <td>{{ item.description|linebreaks }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+        {% else %}
+        <p>No learning journeys added yet. Please add one in the Django admin panel.</p>
+        {% endif %}
+
+
+        <a href="{% url 'about' %}" class="button">Learn More About Me</a>
+    </div>
+</body>
+
+</html>

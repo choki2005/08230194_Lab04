@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>About Sonam Choki</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+
+    </head>
+<body>
+    <div class="navbar">
+        <a href="{% url 'index' %}">Home</a>
+        <a href="{% url 'about' %}">About Me</a>
+    </div>
+
+    <div class="container">
+        <h1>About Me</h1>
+        <h2>Sonam Choki</h2>
+        <p><strong>Age:</strong> 20 years old</p>
+        <p><strong>Country:</strong> Bhutan</p>
+        <p>
+            I am a 20-year-old student from Bhutan pursuing a
+            <strong>Bachelor’s Degree in ICT Education</strong> at
+            <strong>Samtse College of Education</strong>.
+        </p>
+        <p>
+            I am passionate about integrating technology into teaching and learning.
+            I enjoy exploring digital tools, reading educational blogs, and working on
+            group projects. My goal is to become a creative and dedicated ICT educator
+            who inspires students to learn through curiosity and innovation.
+        </p>
+        <a href="{% url 'index' %}" class="button">Back to My Journey</a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,133 @@
+/* ===== Global Styling ===== */
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #e6f0ff;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+/* ===== Navigation Bar ===== */
+.navbar {
+    background-color: #7917a0;
+    padding: 15px 0;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    text-decoration: underline;
+    color: #cce0ff;
+}
+
+/* ===== Content Container ===== */
+.container {
+    width: 80%;
+    margin: 50px auto;
+    background: white;
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 0px 4px 10px rgba(0, 51, 102, 0.3);
+}
+
+/* ===== Headings ===== */
+h1 {
+    text-align: center;
+    color: #003366;
+    margin-bottom: 20px;
+}
+
+/* ===== Image container & image (strict sizing) ===== */
+.image-section {
+    text-align: center;
+    margin: 30px auto;
+    max-width: 720px;
+    /* keeps the image area from expanding too wide */
+    padding: 0 12px;
+}
+
+.journey-image {
+    width: 100%;
+    /* image fills the .image-section width */
+    max-width: 420px;
+    /* absolute limit so it never appears huge */
+    height: auto;
+    display: inline-block;
+    border-radius: 10px;
+    border: 2px solid #7917a0;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.22);
+    transition: transform .25s ease, box-shadow .25s ease;
+}
+
+.journey-image:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.30);
+}
+
+/* ===== Table: very visible borders and fallback rules ===== */
+.journey-table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-top: 30px;
+    background: #fff;
+    border: 2px solid #7917a0;
+    /* outer border */
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+/* ----------------------------- */
+/* JOURNEY TABLE STYLING         */
+/* ----------------------------- */
+.table-wrapper {
+    overflow-x: auto;
+    margin-top: 20px;
+}
+
+.journey-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 8px 25px rgba(12, 12, 12, 12.1);
+    overflow: hidden;
+}
+
+.journey-table th,
+.journey-table td {
+    padding: 12px 15px;
+    text-align: left;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.journey-table th {
+    background: var(--sky3);
+    color:palevioletred;
+}
+
+.journey-table tr:hover {
+    background: rgba(124, 58, 174, 0.1);
+}
+
+.progress-bar-wrapper {
+    width: 100%;
+    background: rgba(0, 0, 0, 0.05);
+    border-radius: 12px;
+    height: 12px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    background: var(--sky3);
+    border-radius: 12px;
+    transition: width 0.5s ease;
+}
