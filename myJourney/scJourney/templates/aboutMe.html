@@ -3,20 +3,27 @@
 <head>
     <title>About Sonam Choki</title>
     {% load static %}
+    <!-- Link to external stylesheet -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
+</head>
 
-    </head>
 <body>
+    <!-- ===== Navigation Bar ===== -->
     <div class="navbar">
         <a href="{% url 'index' %}">Home</a>
         <a href="{% url 'about' %}">About Me</a>
     </div>
 
+    <!-- ===== Main Content Container ===== -->
     <div class="container">
         <h1>About Me</h1>
         <h2>Sonam Choki</h2>
+
+        <!-- ===== Personal Information Section ===== -->
         <p><strong>Age:</strong> 20 years old</p>
         <p><strong>Country:</strong> Bhutan</p>
+
+        <!-- ===== Education & Interests Section ===== -->
         <p>
             I am a 20-year-old student from Bhutan pursuing a
             <strong>Bachelor’s Degree in ICT Education</strong> at
@@ -28,6 +35,8 @@
             group projects. My goal is to become a creative and dedicated ICT educator
             who inspires students to learn through curiosity and innovation.
         </p>
+
+        <!-- ===== Navigation Button Back to Home ===== -->
         <a href="{% url 'index' %}" class="button">Back to My Journey</a>
     </div>
 </body>

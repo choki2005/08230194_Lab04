@@ -4,21 +4,27 @@
 <head>
     <title>My Learning Journey</title>
     {% load static %}
+    <!-- Link to external CSS file -->
     <link rel="stylesheet" href="{% static 'style.css' %}">
 </head>
 
 <body>
+    <!-- ===== Navigation Bar ===== -->
     <div class="navbar">
         <a href="{% url 'index' %}">Home</a>
         <a href="{% url 'about' %}">About Me</a>
     </div>
 
+    <!-- ===== Main Content Container ===== -->
     <div class="container">
         <h1>My Learning Journey</h1>
+
+        <!-- Displaying image (Admin Screenshot or Journey Image) -->
         <div class="image-section">
             <img src="{% static 'images/journey.png' %}" alt="Admin Screenshot" class="journey-image">
         </div>
 
+        <!-- ===== Learning Journey Table ===== -->
         {% if journey %}
         <table class="journey-table">
             <thead>
@@ -30,17 +36,20 @@
             <tbody>
                 {% for item in journey %}
                 <tr>
+                    <!-- Display title and description for each learning journey -->
                     <td>{{ item.title }}</td>
                     <td>{{ item.description|linebreaks }}</td>
                 </tr>
                 {% endfor %}
             </tbody>
         </table>
+
         {% else %}
+        <!-- Message if no learning journeys exist -->
         <p>No learning journeys added yet. Please add one in the Django admin panel.</p>
         {% endif %}
 
-
+        <!-- Link to About Me page -->
         <a href="{% url 'about' %}" class="button">Learn More About Me</a>
     </div>
 </body>
